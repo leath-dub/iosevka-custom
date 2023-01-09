@@ -1,9 +1,6 @@
 #!/bin/sh
 
-buildir=/tmp/iosevka-custom-$$
-
-# make temp directory for build
-mkdir -p $buildir
+buildir=$(pwd)
 
 # clone iosevka docker container repo
 git clone https://github.com/avivace/fonts-iosevka.git $buildir
