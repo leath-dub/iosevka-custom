@@ -1,6 +1,6 @@
 #!/bin/sh
 
-buildir=$(pwd)
+buildir=$(pwd)/build
 
 # clone iosevka docker container repo
 git clone https://github.com/avivace/fonts-iosevka.git $buildir
