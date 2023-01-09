@@ -1,6 +1,9 @@
 name: "Release"
 run-name: 🚀
 
+on:
+  create
+
 jobs:
   release:
     name: "Release Build of Font"
