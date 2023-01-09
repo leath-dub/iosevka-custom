@@ -9,8 +9,7 @@ mkdir -p $buildir
 git clone https://github.com/avivace/fonts-iosevka.git $buildir
 
 # build and run docker container
-cd $buildir/fonts-iosevka
-podman build -t iosevka_build $buildir/fonts-iosevka -f Dockerfile
+podman build -t iosevka_build $buildir -f Dockerfile
 podman run --rm -it -v $(pwd):/build iosevka_build ttf::iosevka-custom
 
 tar zcvf iosevka-custom-$$.tar.gz dist/iosevka-custom
