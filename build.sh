@@ -9,4 +9,4 @@ git clone https://github.com/avivace/fonts-iosevka.git $buildir
 podman build -t iosevka_build $buildir -f Dockerfile
 podman run --rm -it -v $(pwd):/build iosevka_build ttf::iosevka-custom
 
-tar zcvf iosevka-custom-$$.tar.gz dist/iosevka-custom
+tar zcvf iosevka-custom.tar.gz dist/iosevka-custom

@@ -1,12 +1,20 @@
-name: Build Font
-run-name: ${{ github.actor }} 🚀
-on: [push]
+name: Release
+run-name: 🚀
 
 jobs:
-  Explore-GitHub-Actions:
+  release:
+    name: Release Build of Font
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
         uses: actions/checkout@v2
       - name: build font
         run: sh build.sh
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Development Build"
+          files: |
+            iosevka-custom.tar.gz
