@@ -2,7 +2,7 @@ name: "Release"
 run-name: 🚀
 
 on:
-  create
+  workflow_dispatch
 
 jobs:
   release:
