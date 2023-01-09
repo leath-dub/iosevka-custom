@@ -1,14 +1,14 @@
-name: Release
+name: "Release"
 run-name: 🚀
 
 jobs:
   release:
-    name: Release Build of Font
-    runs-on: ubuntu-latest
+    name: "Release Build of Font"
+    runs-on: "ubuntu-latest"
     steps:
-      - name: checkout repo
-        uses: actions/checkout@v2
-      - name: build font
+      - name: "checkout repo"
+        uses: "actions/checkout@v2"
+      - name: "build font"
         run: sh build.sh
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
